@@ -1,0 +1,21 @@
+{
+  "short_name": "E Magnus",
+  "name": "Efectusmagnus",
+  "icons": [
+    {
+      "src": "/img/Efectusmagnus-white-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/Efectusmagnus-white-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#2e7c31",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#2e7c31"
+}
