@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 // Using a stateless functional component, as we are only rendering
 // The title is a immuable property (that is why we use prop rather than state)
-const StartPage = (props) => {
+const StartPageTitle = (props) => {
   return(
     <div className="list-books-title">
       <h1>{props.title}</h1>
-    </div>{/* End of list books title*/}
+    </div>
   )
 }
 
