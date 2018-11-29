@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import  Book from './Book'
-import  * BooksAPI from './BooksAPI'
+import  * as BooksAPI from './BooksAPI'
 
 class SearchPage extends Component {
   // Store books as state, rather than as a prop, as book shelf may change
