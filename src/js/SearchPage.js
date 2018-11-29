@@ -24,10 +24,12 @@ class SearchPage extends Component {
     if (bookQuery) {
       BooksAPI.search(bookQuery).then(bookIsFound) => {
         if(!bookIsFound || bookIsFound.hasOwnProperty('error')) {
+          this.setState({searchBook: [], hasError: true})
+        } else {
           this.setState({searchBook: bookIsFound, hasError: false})
           this.syncBookShelves()
         }
-      }
+      })
     } else {
       this.setState({searchBook: []})
     }
