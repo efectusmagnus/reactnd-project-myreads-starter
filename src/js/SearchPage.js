@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import  Book from './Book'
 import  * as BooksAPI from './BooksAPI'
@@ -22,7 +22,7 @@ class SearchPage extends Component {
   onSearch = (event) => {
     const bookQuery = event.target.value
     if (bookQuery) {
-      BooksAPI.search(bookQuery).then(bookIsFound) => {
+      BooksAPI.search(bookQuery).then((bookIsFound) => {
         if(!bookIsFound || bookIsFound.hasOwnProperty('error')) {
           this.setState({searchBook: [], hasError: true})
         } else {
