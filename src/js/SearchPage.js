@@ -36,17 +36,21 @@ class SearchPage extends Component {
   }
 
   // Synchronize searched books with the current shelf books
-  const books = this.state.books
-  const searchBook = this.state.searchBook
-  if (searchBook.length > 0) {
-    books.forEach((book) => {
-      if (book.id === searchedBook) {
-        searchedBook.shelf === book.shelf
-      }
-    })
-  }
+  syncBookShelves = () => {
+    const books = this.state.books
+    const searchBook = this.state.searchBook
+    if (searchBook.length > 0) {
+      books.forEach((book) => {
+        searchBook.forEach((searchBook) => {
+          if (book.id === searchedBook.id) {
+            searchedBook.shelf = bookshelf
+          }
+        })
+      })
+    }
 
-  this.setState({searchBook: searchBook})
+    this.setState({searchBook: searchBook})
+  }
 
   // Change book shelf with handler function
   onChangeShelf = (book, shelf) => {
