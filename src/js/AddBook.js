@@ -13,7 +13,7 @@ const AddBook = (props) => {
           booksFromStartPage: currentBooks
         }
       }} />
-    </div>{/* End of open search */}
+    </div>/* End of open search */
   )
 }
 
