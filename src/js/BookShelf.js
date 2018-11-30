@@ -35,7 +35,7 @@ class BookShelf extends Component {
     }
 
     render() {
-      const board = [
+      const boards = [
         {type: 'currentlyReading', title: 'Currently Reading'},
         {type: 'wantToRead', title: 'Want to Read'},
         {type: 'read', title: 'Already Read'}
@@ -46,7 +46,7 @@ class BookShelf extends Component {
           <div className="list-books-content">
             {this.state.books.length > 0 &&
             <div>
-              { boards.map((boards, index) => {
+              { boards.map((board, index) => {
                   const booksBoard = this.state.books.filter(
                     (book) => book.shelf === board.type)
                   return(
