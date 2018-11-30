@@ -58,14 +58,14 @@ class BookShelf extends Component {
                         boardList={boards}
                         onChangeShelf={this.onChangeShelf}
                       />
-                    </div>{/* End of bookshelf */}
+                    </div>/* End of bookshelf */
                   )
                 })
               }
-            </div>}{/* End of div 1 to make react happy */}
-          </div>{/* End of list books content */}
+            </div>}/* End of div 1 to make react happy */
+          </div>/* End of list books content */
           <AddBook currentBooks={this.state.books} />
-        </div>{/* End of div 2 to make react happy */}
+        </div>/* End of div 2 to make react happy */
       )
     }
 }
