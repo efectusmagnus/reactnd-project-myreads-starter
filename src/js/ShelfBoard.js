@@ -13,8 +13,8 @@ const ShelfBoard = (props) => {
             <Book key={book.id} book={book} onChangeShelf={onChangeShelf}/>
           ))}
         </ol>
-      </div>{/*End of bookshelf-books */}
-    </div>{/*End of div to make react happy*/}
+      </div>/*End of bookshelf-books */
+    </div>/*End of div to make react happy*/
   )
 }
 
