@@ -41,7 +41,7 @@ class SearchPage extends Component {
     const searchBook = this.state.searchBook
     if (searchBook.length > 0) {
       books.forEach((book) => {
-        searchBook.forEach((searchBook) => {
+        searchBook.forEach((searchedBook) => {
           if (book.id === searchedBook.id) {
             searchedBook.shelf = book.shelf
           }
