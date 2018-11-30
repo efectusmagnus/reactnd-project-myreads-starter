@@ -4,7 +4,7 @@ import noBookCover from '../owl-no-cover-available.png'
 
 // Using a stateless functional component, as we are only rendering
 const Book = (props) => {
-  const { book.onChangeShelf} = props
+  const { book, onChangeShelf} = props
   return(
     <li>
       <div className="book">
