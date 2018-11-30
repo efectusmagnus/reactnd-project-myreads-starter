@@ -1,6 +1,6 @@
 import React from 'react'
 import StartPageTitle from './StartPageTitle'
-import BookShelf from './BookShelf'
+import * as BookShelf from './BookShelf'
 
 // Using a stateless functional component, as we are only rendering
 const StartPage = () => {
