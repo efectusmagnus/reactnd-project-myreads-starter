@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './src/components/App'
+import App from './src/js/App'
 
 /**
  This course is not designed to teach Test Driven Development.
