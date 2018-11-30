@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import noBookCover from '../owl-no-cover-available.png'
+import noBookCover from '../images/owl-no-cover-available.png'
 
 // Using a stateless functional component, as we are only rendering
 const Book = (props) => {
