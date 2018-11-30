@@ -21,10 +21,4 @@ StartPageTitle.PropTypes = {
   title: PropTypes.string.isRequired
 }
 
-
-// Set default prop value using the .defaultProps property
-StartPageTitle.PropTypes = {
-title: PropTypes.string.isRequired
-}
-
 export default StartPageTitle
