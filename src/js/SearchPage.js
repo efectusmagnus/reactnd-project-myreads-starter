@@ -90,7 +90,7 @@ class SearchPage extends Component {
             <div>
               <div>
                 <h3>Search Returned {searchBook.length} books.</h3>
-              <div>
+              </div>
               <ol className="books-grid">
                 {searchBook.map((book) => (
                   <Book
@@ -110,7 +110,7 @@ class SearchPage extends Component {
             )
           }
         </div>{/* End of search-books-results */}
-      </div>{/* End of search-books */}
+      </div>
     )
   }
 }
