@@ -54,7 +54,7 @@ class SearchPage extends Component {
 
   // Change book shelf with handler function
   onChangeShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf).then(found) {
+    BooksAPI.update(book, shelf).then((found) {
       // Change the shelf property of the book object to a new shelf
       book.shelf = shelf
 
@@ -67,7 +67,7 @@ class SearchPage extends Component {
         updateBooks.push(book)
         // Place the new state with the updatedBooks array
         this.setState({books: updatedBooks})
-    }
+    })
   }
 
   render() {
