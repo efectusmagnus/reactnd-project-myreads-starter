@@ -9,11 +9,11 @@ class BookShelf extends Component {
     }
 
     componentDidMount() {
-      BooksAPI.getAll().then(books) => {
+      BooksAPI.getAll().then((books) => {
         this.setState({
           books: books
         })
-      }
+      })
     }
 
     // Change book shelf (with handler function)
