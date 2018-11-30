@@ -100,17 +100,15 @@ class SearchPage extends Component {
                   />
                 ))}
               </ol>
-            </div>{/* End of div to make react happy */}
+            </div>, {/* End of div to make react happy */}
           )}
-          {
-            hasError && (
-              <div>
-                <h3>Search returned no books. Please try again!</h3>
-              </div>
-            )
-          }
-        </div>{/* End of search-books-results */}
-      </div>
+          {hasError && (
+            <div>
+              <h3>Search returned no books. Please try again!</h3>
+            </div>
+          )}
+        </div> {/* End of search-books-results */}
+      </div>, {/* End of search-books */}
     )
   }
 }
