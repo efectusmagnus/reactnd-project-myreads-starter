@@ -43,7 +43,7 @@ class SearchPage extends Component {
       books.forEach((book) => {
         searchBook.forEach((searchBook) => {
           if (book.id === searchedBook.id) {
-            searchedBook.shelf = bookshelf
+            searchedBook.shelf = book.shelf
           }
         })
       })
