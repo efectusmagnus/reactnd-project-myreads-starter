@@ -5,7 +5,7 @@ import AddBook from './AddBook'
 
 class BookShelf extends Component {
     state = {
-      book: []
+      books: []
     }
 
     componentDidMount() {
@@ -43,29 +43,31 @@ class BookShelf extends Component {
 
       return(
         <div>
-          <div className="list-books-content">
+          <main className="list-books-content">
             {this.state.books.length > 0 &&
             <div>
               { boards.map((board, index) => {
                   const booksBoard = this.state.books.filter(
-                    (book) => book.shelf === board.type)
+                    (book) => book.shelf === board.type
+                  )
                   return(
-                    <div className="bookshelf" key={index}>
-                      <h2 className="bookshelf-title">{board.title}</h2>
-                      <ShelfBoard
-                        key={index}
-                        books={booksBoard}
-                        boardList={boards}
-                        onChangeShelf={this.onChangeShelf}
-                      />
-                    </div>/* End of bookshelf */
+                      <section className="bookshelf" key={index}>
+                        <h2 className="bookshelf-title">{board.title}</h2>
+                        <ShelfBoard
+                          key={index}
+                          books={booksBoard}
+                          boardList={boards}
+                          onChangeShelf={this.onChangeShelf}
+                        />
+                      </section>
                   )
                 })
               }
-            </div>}/* End of div 1 to make react happy */
-          </div>/* End of list books content */
+            </div>
+          }
+          </main>
           <AddBook currentBooks={this.state.books} />
-        </div>/* End of div 2 to make react happy */
+        </div>
       )
     }
 }
