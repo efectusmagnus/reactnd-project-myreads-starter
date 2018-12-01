@@ -12,9 +12,8 @@ const Book = (props) => {
           <div className="book-cover" style={{
             width: 128,
             height: 193,
-            backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`
-          }}>
-          </div>{/*End of book cover*/}
+            backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`}}>
+          </div>
           <div className="book-shelf-changer">
             <select
               onChange={(event) => onChangeShelf(book, event.target.value)}
@@ -25,18 +24,18 @@ const Book = (props) => {
               <option value="read">Already Read</option>
               <option value="none">None</option>
             </select>
-          </div>{/*End of book shelf changer*/}
+          </div>
           <div className="book-title">
             {book.title ? book.title : null}
-          </div>{/*End of book title*/}
+          </div>
           { // Display authors in separate lines (if there are more than one)
             book.authors &&
             book.authors.map((author, index) => (
               <div className="book-authors" key={index}>{author}</div>
             ))
           }
-        </div>{/*End of book top*/}
-      </div>{/*End of book*/}
+        </div>
+      </div>
     </li>
   )
 }
