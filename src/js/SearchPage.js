@@ -83,8 +83,8 @@ class SearchPage extends Component {
               onChange={this.onSearch}
               placeholder="Search by title or author"
             />
-          </div>{/* End of search-books-input-wrapper */}
-        </div>{/* End of search-books-bar */}
+          </div>
+        </div>
         <div className="search-books-results">
           {searchBook.length > 0 && (
             <div>
@@ -100,15 +100,15 @@ class SearchPage extends Component {
                   />
                 ))}
               </ol>
-            </div>, {/* End of div to make react happy */}
+            </div>
           )}
           {hasError && (
             <div>
               <h3>Search returned no books. Please try again!</h3>
             </div>
           )}
-        </div> {/* End of search-books-results */}
-      </div>, {/* End of search-books */}
+        </div>
+      </div>
     )
   }
 }
