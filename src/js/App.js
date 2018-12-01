@@ -9,8 +9,8 @@ import '../css/App.css'
 const BooksApp = () => {
   return(
     <div className="app">
-      <Route exact path="/" component={StartPage}/>
-      <Route path="/search" component={SearchPage}/>
+      <Route exact path="/" component={ StartPage }/>
+      <Route path="/search" component={ SearchPage }/>
     </div>
   )
 }
