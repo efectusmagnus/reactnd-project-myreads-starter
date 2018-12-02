@@ -75,41 +75,44 @@ class SearchPage extends Component {
     const hasError = this.state.hasError
     return(
       <div className="bg-color">
-        <div className="search-books">
+        <header>
           <div className="search-books-bar">
-            <Link to="/" className="close-search" aria-label="Return to the home page">Close</Link>
-            <div className="search-books-input-wrapper">
-              <input
-                type="text"
-                onChange={this.onSearch}
-                placeholder="Search by title or author"
-              />
-            </div>
-          </div>
-          <div className="search-books-results">
-            {searchBook.length > 0 && (
-              <div>
-                <div>
-                  <h3 className="book-title">Search returned {searchBook.length} books.</h3>
-                </div>
-                <ol className="books-grid">
-                  {searchBook.map((book) => (
-                    <Book
-                      key={book.id}
-                      book={book}
-                      onChangeShelf={this.onChangeShelf}
-                    />
-                  ))}
-                </ol>
+            <form>
+              <Link to="/" className="close-search" aria-label="Return to the home page">Close</Link>
+              <div className="search-books-input-wrapper">
+                <input
+                  type="text"
+                  onChange={this.onSearch}
+                  placeholder="Search by title or author"
+                />
               </div>
+            </form>
+          </div>
+        </header>
 
-            )}
-            {hasError && (
+        <div className="search-books-results">
+          {searchBook.length > 0 && (
+            <div>
               <div>
-                <h3>Search returned no books. Please try again!</h3>
+                <h3 className="book-title">Search Returned {searchBook.length} books.</h3>
               </div>
-            )}
-          </div>
+              <ol className="books-grid">
+                {searchBook.map((book) => (
+                  <Book
+                    key={book.id}
+                    book={book}
+                    onChangeShelf={this.onChangeShelf}
+                  />
+                ))}
+              </ol>
+            </div>
+
+          )}
+          {hasError && (
+            <div>
+              <h3>Search returned no books. Please try again!</h3>
+            </div>
+          )}
         </div>
       </div>
     )
