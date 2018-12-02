@@ -16,10 +16,9 @@ const Book = (props) => {
             </div>
             <div className="book-shelf-changer">
             <form>
-              <label for="select-item"></label>
               <select
                 name="select-item"
-                labelledby="Move a book to the following options:"
+                aria-label="Move a book to the following options:"
                 onChange={(event) => onChangeShelf(book, event.target.value)}
                 value={book.shelf ? book.shelf : 'none'}>
                 <option value="moveTo" disabled>Move to...</option>
