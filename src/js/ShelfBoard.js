@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import Book from './Book'
 
 // Using a stateless functional component, as we are only rendering
@@ -19,10 +19,10 @@ const ShelfBoard = (props) => {
 }
 
 // Use PropTypes to typecheck the props for a component
-ShelfBoard.PropTypes = {
-  ShelfBoardIndex: PropTypes.number.isRequired,
-  books: PropTypes.array.isRequired,
-  onChangeShelf: PropTypes.func.isRequired
+ShelfBoard.propTypes = {
+  ShelfBoardIndex: propTypes.number.isRequired,
+  books: propTypes.array.isRequired,
+  onChangeShelf: propTypes.func.isRequired
 }
 
 export default ShelfBoard
