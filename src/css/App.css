@@ -60,17 +60,6 @@ a:hover {
   flex: 1;
 }
 
-.bookshelf {
-  padding: 0 10px 20px;
-
-}
-
-@media (min-width: 600px) {
-  .bookshelf {
-    padding: 0 20px 40px;
-  }
-}
-
 .bookshelf-title {
   border-bottom: 1px solid transparent;
   background-image: url('../images/madeira-texture-v2.png');
@@ -120,8 +109,13 @@ a:hover {
 
 .bg-color {
   background-color: #faebd7;
-  padding-bottom: 3.6em;
+  padding-bottom: 4.6rem;
 }
+
+form {
+  display: contents;
+}
+
 .search-books-bar {
   position: fixed;
   width: 100%;
@@ -214,14 +208,15 @@ button:active {
 
 .book-information {
   line-height: 0.8em;
-  padding-top: 0.9em;
+  padding: 0.9em 0;
   height: auto;
+  display: inline-block;
 }
 
-.book-title {
-  font-size: 0.8em;
+.book-title,
+.book-authors {
+  font-size: 1em;
 }
-
 .book-title {
   margin-top: 1.2em;
   line-height: 1.3rem;
@@ -229,8 +224,7 @@ button:active {
 
 .book-authors {
   color: #504d4d;
-  font-size: 0.8em;
-  line-height: 0.1em;
+  line-height: 1em;
 }
 
 .book-top {
