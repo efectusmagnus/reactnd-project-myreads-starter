@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 // Using a stateless functional component because we are only rendering
 const AddBook = (props) => {
   const {currentBooks} = props
   return(
     <div className="open-search">
-      <Link to={{
+      <Link aria-label="Search books to add to your book shelf" to={{
         pathname: '/search',
         state: {
           booksFromStartPage: currentBooks
@@ -18,8 +18,8 @@ const AddBook = (props) => {
 }
 
 //Use PropTypes to typecheck the props for a component
-AddBook.PropTypes = {
-  currentBooks: PropTypes.array.isRequired
+AddBook.propTypes = {
+  currentBooks: propTypes.array.isRequired
 }
 
 export default AddBook
