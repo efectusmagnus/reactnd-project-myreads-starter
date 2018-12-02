@@ -74,39 +74,42 @@ class SearchPage extends Component {
     const searchBook = this.state.searchBook
     const hasError = this.state.hasError
     return(
-      <div className="search-books">
-        <div className="search-books-bar">
-          <Link to="/" className="close-search">Close</Link>
-          <div className="search-books-input-wrapper">
-            <input
-              type="text"
-              onChange={this.onSearch}
-              placeholder="Search by title or author"
-            />
+      <div className="bg-color">
+        <div className="search-books">
+          <div className="search-books-bar">
+            <Link to="/" className="close-search">Close</Link>
+            <div className="search-books-input-wrapper">
+              <input
+                type="text"
+                onChange={this.onSearch}
+                placeholder="Search by title or author"
+              />
+            </div>
           </div>
-        </div>
-        <div className="search-books-results">
-          {searchBook.length > 0 && (
-            <div>
+          <div className="search-books-results">
+            {searchBook.length > 0 && (
               <div>
-                <h3>Search Returned {searchBook.length} books.</h3>
+                <div>
+                  <h3 className="book-title">Search Returned {searchBook.length} books.</h3>
+                </div>
+                <ol className="books-grid">
+                  {searchBook.map((book) => (
+                    <Book
+                      key={book.id}
+                      book={book}
+                      onChangeShelf={this.onChangeShelf}
+                    />
+                  ))}
+                </ol>
               </div>
-              <ol className="books-grid">
-                {searchBook.map((book) => (
-                  <Book
-                    key={book.id}
-                    book={book}
-                    onChangeShelf={this.onChangeShelf}
-                  />
-                ))}
-              </ol>
-            </div>
-          )}
-          {hasError && (
-            <div>
-              <h3>Search returned no books. Please try again!</h3>
-            </div>
-          )}
+
+            )}
+            {hasError && (
+              <div>
+                <h3>Search returned no books. Please try again!</h3>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     )
