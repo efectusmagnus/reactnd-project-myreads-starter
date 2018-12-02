@@ -77,7 +77,7 @@ class SearchPage extends Component {
       <div className="bg-color">
         <div className="search-books">
           <div className="search-books-bar">
-            <Link to="/" className="close-search">Close</Link>
+            <Link to="/" className="close-search" aria-label="Return to the home page">Close</Link>
             <div className="search-books-input-wrapper">
               <input
                 type="text"
@@ -90,7 +90,7 @@ class SearchPage extends Component {
             {searchBook.length > 0 && (
               <div>
                 <div>
-                  <h3 className="book-title">Search Returned {searchBook.length} books.</h3>
+                  <h3 className="book-title">Search returned {searchBook.length} books.</h3>
                 </div>
                 <ol className="books-grid">
                   {searchBook.map((book) => (
