@@ -6,39 +6,39 @@ import noBookCover from '../images/owl-no-cover-available.png'
 const Book = (props) => {
   const { book, onChangeShelf} = props
   return(
-    <li>
-      <div className="book">
-        <div className="book-top">
-          <div className="book-cover" alt="" style={{
-            width: 128,
-            height: 193,
-            backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`}}>
-          </div>
-          <div className="book-shelf-changer">
-            <select
-              onChange={(event) => onChangeShelf(book, event.target.value)}
-              value={book.shelf ? book.shelf : 'none'}>
-              <option value="moveTo" disabled>Move to...</option>
-              <option value="currentlyReading">Currently Reading</option>
-              <option value="wantToRead">Want to Read</option>
-              <option value="read">Already Read</option>
-              <option value="none">None</option>
-            </select>
-          </div>
-          <div className="book-information">
-            <h3 className="book-title">
-              {book.title ? book.title : null}
-            </h3>
-            { // Display authors in separate lines (if there are more than one)
-              book.authors &&
-              book.authors.map((author, index) => (
-                <h4 className="book-authors" key={index}>{author}</h4>
-              ))
-            }
+      <li className="books-container">
+        <div className="book">
+          <div className="book-top">
+            <div className="book-cover" alt={book.title} style={{
+              width: 128,
+              height: 193,
+              backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`}}>
+            </div>
+            <div className="book-shelf-changer">
+              <select
+                onChange={(event) => onChangeShelf(book, event.target.value)}
+                value={book.shelf ? book.shelf : 'none'}>
+                <option value="moveTo" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Already Read</option>
+                <option value="none">None</option>
+              </select>
+            </div>
+            <div className="book-information">
+              <h3 className="book-title">
+                {book.title ? book.title : null}
+              </h3>
+              { // Display authors in separate lines (if there are more than one)
+                book.authors &&
+                book.authors.map((author, index) => (
+                  <h4 className="book-authors" key={index}>{author}</h4>
+                ))
+              }
+            </div>
           </div>
         </div>
-      </div>
-    </li>
+      </li>
   )
 }
 
