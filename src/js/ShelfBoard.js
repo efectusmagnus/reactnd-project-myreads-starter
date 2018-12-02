@@ -20,7 +20,7 @@ const ShelfBoard = (props) => {
 
 // Use PropTypes to typecheck the props for a component
 ShelfBoard.propTypes = {
-  ShelfBoardIndex: propTypes.number.isRequired,
+  /*ShelfBoardIndex: propTypes.number.isRequired,*/
   books: propTypes.array.isRequired,
   onChangeShelf: propTypes.func.isRequired
 }
