@@ -19,10 +19,17 @@ footer {
   text-align: center;
   padding: 1rem;
   font-weight: 300;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #444242;
 }
+a {
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: underline;
+  color: #745542;
+}
 .color-link {
   color: #745542;
   text-decoration: none;
@@ -196,7 +203,7 @@ button:active {
 }
 
 .books-grid li {
-  padding: 3em 1.5em;
+  padding: 4em 1.5em;
   text-align: left;
   display: table;
 }
@@ -211,8 +218,7 @@ button:active {
   height: auto;
 }
 
-.book-title,
-.book-authors {
+.book-title {
   font-size: 0.8em;
 }
 
@@ -223,8 +229,8 @@ button:active {
 
 .book-authors {
   color: #504d4d;
-
-  line-height: 0.6em;
+  font-size: 0.8em;
+  line-height: 0.1em;
 }
 
 .book-top {
@@ -261,7 +267,9 @@ button:active {
 
 .book-cover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background: #eee;
+  /*background: #eee;*/
+  background-image: url('../images/owl-no-cover-available.png');
+  background-size: cover;
   width: 8rem;
   height: 12rem;
 }
