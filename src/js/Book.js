@@ -15,7 +15,11 @@ const Book = (props) => {
               backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`}}>
             </div>
             <div className="book-shelf-changer">
+            <form>
+              <label for="select-item"></label>
               <select
+                name="select-item"
+                labelledby="Move a book to the following options:"
                 onChange={(event) => onChangeShelf(book, event.target.value)}
                 value={book.shelf ? book.shelf : 'none'}>
                 <option value="moveTo" disabled>Move to...</option>
@@ -24,6 +28,7 @@ const Book = (props) => {
                 <option value="read">Already Read</option>
                 <option value="none">None</option>
               </select>
+            </form>
             </div>
             <div className="book-information">
               <h3 className="book-title">
