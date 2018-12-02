@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import noBookCover from '../images/owl-no-cover-available.png'
 
 // Using a stateless functional component, as we are only rendering
@@ -47,9 +47,9 @@ const Book = (props) => {
 }
 
 //Use PropTypes to typecheck the props for a component
-Book.PropTypes = {
-  book: PropTypes.object.isRequired,
-  onChangeShelf: PropTypes.func.isRequired
+Book.propTypes = {
+  book: propTypes.object.isRequired,
+  onChangeShelf: propTypes.func.isRequired
 }
 
 export default Book
