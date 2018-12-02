@@ -9,9 +9,11 @@ const Book = (props) => {
     <li>
       <div className="book">
         <div className="book-top">
-          <div className="book-cover" style={{
-            backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`}}>
-          </div>
+          <img className="book-cover" alt="" style={{
+            width: 128,
+            height: 193,
+            backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail: noBookCover})`}}
+          />
           <div className="book-shelf-changer">
             <select
               onChange={(event) => onChangeShelf(book, event.target.value)}
