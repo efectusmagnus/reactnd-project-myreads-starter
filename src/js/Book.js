@@ -23,15 +23,17 @@ const Book = (props) => {
               <option value="none">None</option>
             </select>
           </div>
-          <div className="book-title">
-            {book.title ? book.title : null}
+          <div className="book-information">
+            <h3 className="book-title">
+              {book.title ? book.title : null}
+            </h3>
+            { // Display authors in separate lines (if there are more than one)
+              book.authors &&
+              book.authors.map((author, index) => (
+                <h4 className="book-authors" key={index}>{author}</h4>
+              ))
+            }
           </div>
-          { // Display authors in separate lines (if there are more than one)
-            book.authors &&
-            book.authors.map((author, index) => (
-              <div className="book-authors" key={index}>{author}</div>
-            ))
-          }
         </div>
       </div>
     </li>
