@@ -13,7 +13,7 @@ const StartPageTitle = (props) => {
 
 // Set default prop value using the .defaultProps property
 StartPageTitle.defaultProps = {
-  title: 'MyReads'
+  title: 'My Reads'
 }
 
 // Use PropTypes to typecheck the props for a component
