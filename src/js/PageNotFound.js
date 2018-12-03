@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PageNotFound from '../images/owl-page-not-found';
+import PageNotFound from '../images/owl-page-not-found.png';
 
 const PageNotFound = () => (
   <div>
@@ -14,7 +14,9 @@ const PageNotFound = () => (
       </figcaption>
     </figure>
     <div className="home-link">
-      <Link to="/">Return to the home page or try again later. </Link>
+      <Link to="/" alt="Return to home page">Return to the home page or try again later. </Link>
     </div>
   </div>
 )
+
+export default PageNotFound
