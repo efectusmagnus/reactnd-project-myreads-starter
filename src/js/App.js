@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import  StartPage from './StartPage'
 import  SearchPage from './SearchPage'
+import PageNotFound from '../images/owl-page-not-found.png'
 import '../css/App.css'
 
 // Using a stateless functional component, as we are only rendering
