@@ -43,7 +43,7 @@ class BookShelf extends Component {
 
       return(
         <div>
-          <main className="list-books-content">
+          <div className="list-books-content">
             {this.state.books.length > 0 &&
             <div>
               { boards.map((board, index) => {
@@ -65,7 +65,7 @@ class BookShelf extends Component {
               }
             </div>
           }
-          </main>
+          </div>
           <AddBook currentBooks={this.state.books} />
         </div>
       )
