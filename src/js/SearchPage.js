@@ -13,9 +13,11 @@ class SearchPage extends Component {
 
   // Fetch books from the StartPage after component is inserted in the DOM
   componentDidMount() {
-    this.setState({
-      books: this.props.location.state.booksFromStartPage
-    })
+    if (typeof (books) !== 'undefined') {
+      this.setState({
+        books: this.props.location.state.booksFromStartPage
+      })
+    }
   }
 
   //  Search book through BooksAPI with handler function
