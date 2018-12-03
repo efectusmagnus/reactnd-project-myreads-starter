@@ -12,6 +12,7 @@ import '../css/App.css'
 const PageNotFound = ({location}) => (
   <div>
     <h3>No match for <code>{location.pathname}</code></h3>
+    <p>The page you were looking for was moved or does not exist.</p>
   </div>
 )
 // Using a stateless functional component, as we are only rendering
@@ -21,9 +22,8 @@ const BooksApp = () => {
       <Router>
         <Switch>
           <Route path="/" alt="home page" exact component={ StartPage } />
-          <Redirect to="/" />
           <Route path="/search" alt="search page" component={ SearchPage } />
-          <Route component={ PageNotFound } />
+          <Redirect component={ PageNotFound } to="/" />
         </Switch>
       </Router>
     </div>
