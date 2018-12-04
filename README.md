@@ -1,6 +1,6 @@
 # MyReads - Project N°7
 
-This project was built for the Udacity React Nanodegree Program. The purpose of the project was to add interactivity to the app by refactoring the static code.
+This project was built for the Udacity Front-End Web Nanodegree Program. The purpose of the project was to add interactivity to the app by refactoring the static code.
 
 ![My Reads in all standard formats](https://i.imgur.com/XRAxrCG.jpg)
 
