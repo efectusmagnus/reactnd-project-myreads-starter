@@ -40,7 +40,7 @@ a:hover {
   padding: 10px 0;
   background: #2e7c31;
   text-align: center;
-  background-image: url('../images/listras-texture.jpg');
+  background-image: url('../images/light-listras-texture.png');
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -62,7 +62,7 @@ a:hover {
 
 .bookshelf-title {
   border-bottom: 1px solid transparent;
-  background-image: url('../images/madeira-texture-v2.png');
+  background-image: url('../images/wood-texture.png');
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: 0.8em;
   margin-top: 3.5rem;
