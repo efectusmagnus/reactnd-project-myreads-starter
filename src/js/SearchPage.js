@@ -83,6 +83,7 @@ class SearchPage extends Component {
               <Link to="/" className="close-search" aria-label="Return to the home page">Close</Link>
               <div className="search-books-input-wrapper">
                 <input
+                  aria-label="text placeholder"
                   type="text"
                   onChange={this.onSearch}
                   placeholder="Search by title or author"
