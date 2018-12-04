@@ -7,7 +7,6 @@ import { BrowserRouter as Router,
 import StartPage from './StartPage'
 import SearchPage from './SearchPage'
 import '../css/App.css'
-/*import PageNotFound from '../images/PageNotFound.png'*/
 
 const PageNotFound = ({location}) => (
   <div>
