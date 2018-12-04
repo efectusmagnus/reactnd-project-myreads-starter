@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import propTypes from 'prop-types'
 
 // Using a stateless functional component because we are only rendering
-const AddBook = (props) => {
-  const {currentBooks} = props
+// with props destructuring inside function's parameter
+const AddBook = ({ currentBooks }) => {
   return(
     <div className="open-search">
       <Link aria-label="Search books to add to your book shelf" to={{
