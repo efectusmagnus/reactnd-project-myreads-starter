@@ -14,7 +14,7 @@ Once all dependencies have been installed, you can launch the app with:
 * `npm start`
 
 A new browser window should automatically open the browser and display the app.
-If it does not happen, navigate to http:localhost:3000/ in your browser of choice.
+If it does not happen, navigate to `http:localhost:3000/` in your browser of choice.
 
 ## How to use the App
 
