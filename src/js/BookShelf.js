@@ -24,13 +24,10 @@ class BookShelf extends Component {
         //Change book shelf property to new shelf
         book.shelf = newShelf
         /** Replace the previous state book array (excluding current books) with
-        the new updatedBooks array
+        the new updated books
         */
-        var updatedBooks = this.state.books.filter(
-          (bookResults) => bookResults.id !== book.id)
-          updatedBooks.push(book)
-          // Place the new state with the updatedBooks array
-          this.setState({books: updatedBooks})
+        const books = this.state.books.filter(b => b.id !== book.id).concat(book);
+        this.setState({ books });
       })
     }
 
