@@ -62,12 +62,8 @@ class SearchPage extends Component {
       /** Replace the previous state book array (without current books) with the
       new updatedBooks array
       */
-      var updatedBooks = this.state.books.filter((bookResults) =>
-        bookResults.id !== book.id)
-
-        updatedBooks.push(book)
-        // Place the new state with the updatedBooks array
-        this.setState({books: updatedBooks})
+      const books = this.state.books.filter(b => b.id !== book.id).concat(book);
+      this.setState({ books });
     })
   }
 
