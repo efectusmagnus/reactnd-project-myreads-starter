@@ -72,8 +72,7 @@ class SearchPage extends Component {
     const hasError = this.state.hasError
     return(
       <div className="bg-color">
-        <header>
-          <div className="search-books-bar">
+        <header className="search-books-bar">
             <form>
               <Link to="/" className="close-search" aria-label="Return to the home page">Close</Link>
               <div className="search-books-input-wrapper">
@@ -85,15 +84,12 @@ class SearchPage extends Component {
                 />
               </div>
             </form>
-          </div>
         </header>
 
-        <div className="search-books-results">
+        <section className="search-books-results">
           {searchBook.length > 0 && (
             <div>
-              <div>
-                <h3 className="book-title">Search Returned {searchBook.length} books.</h3>
-              </div>
+              <h3 className="book-title">Search Returned {searchBook.length} books.</h3>
               <ol className="books-grid">
                 {searchBook.map((book) => (
                   <Book
@@ -107,11 +103,9 @@ class SearchPage extends Component {
 
           )}
           {hasError && (
-            <div>
-              <h3>Search returned no books. Please try again!</h3>
-            </div>
+            <h3>Search returned no books. Please try again!</h3>
           )}
-        </div>
+        </section>
       </div>
     )
   }
